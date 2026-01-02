@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Lovers Cafe | Premium Dining</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Lightbox (Only for Menu Cards) -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Full size">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="wrapper">
+            <!-- Wrapped Logo -->
+            <div class="logo-box">
+                <img src="images/LOGO.jpg" alt="Food Lovers Logo">
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" class="nav-link" onclick="toggleMenu()">Story</a></li>
+                <li><a href="#menu-card" class="nav-link" onclick="toggleMenu()">Menu</a></li>
+                <li><a href="#gallery" class="nav-link" onclick="toggleMenu()">Gallery</a></li>
+                <li><a href="#visit" class="nav-link" onclick="toggleMenu()">Visit</a></li>
+            </ul>
+
+            <div class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">Est. 2020 • Dhaka</span>
+            <h1 class="hero-title">Food Lovers Cafe</h1>
+            <p class="hero-desc">Experience the Art of Culinary Excellence.<br>
+                <span style="font-size:0.9em; opacity:0.8;">দারুস সালামের সেরা স্বাদের আড্ডাখানা</span>
+            </p>
+
+            <div style="margin-top: 40px;">
+                <a href="#menu-card" class="btn">View Menu</a>
+                <a href="https://wa.me/8801648448868" target="_blank" class="btn btn-secondary">
+                    Reserve a Table
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="wrapper reveal">
+            <div class="section-header">
+                <span class="sub-title">Our Philosophy</span>
+                <h2 class="main-title">The Story</h2>
+            </div>
+            <p class="about-text">
+                Welcome to a sanctuary of taste. At <strong>Food Lovers Cafe</strong>, we believe every meal should be a
+                celebration. Located in the heart of Bardhanbari, we craft dishes that not only satiate hunger but also
+                touch the soul. <br><br>
+                আমরা বিশ্বাস করি ভালো খাবার মানেই ভালো মুহূর্ত। তাই আমাদের প্রতিটি ডিশ তৈরি হয় ভালোবাসা আর যাত্ন নিয়ে।
+            </p>
+        </div>
+    </section>
+
+    <!-- Real Menu Section (The Images) -->
+    <section id="menu-card" style="background-color: #fff;">
+        <div class="wrapper reveal">
+            <div class="section-header">
+                <span class="sub-title">Discover</span>
+                <h2 class="main-title">Our Menu</h2>
+            </div>
+
+            <div class="menu-card-grid">
+                <!-- Click to zoom these images only -->
+                <img src="images/FOOD MENU PART1.jpg" alt="Menu Page 1" class="menu-card-img"
+                    onclick="openLightbox(this.src)">
+                <img src="images/FOOD MENU PART 2.jpg" alt="Menu Page 2" class="menu-card-img"
+                    onclick="openLightbox(this.src)">
+            </div>
+
+            <div style="text-align:center; margin-top:50px;">
+                <p style="color:#888; margin-bottom:20px;">Click menu to zoom</p>
+                <a href="https://wa.me/8801648448868" class="btn">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Item Gallery (The Grid) -->
+    <section id="gallery">
+        <div class="wrapper reveal">
+            <div class="section-header">
+                <span class="sub-title">Culinary Delights</span>
+                <h2 class="main-title">Food Gallery</h2>
+            </div>
+
+            <div class="food-grid" id="foodGrid">
+                <!-- JS Generated Items -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section id="visit">
+        <div class="wrapper reveal">
+            <div class="section-header">
+                <span class="sub-title">Find Us</span>
+                <h2 class="main-title">Location</h2>
+            </div>
+
+            <div class="map-frame">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.598346219323!2d90.3546743153628!3d23.77732949290097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c09f98359a3f%3A0x4e6b36015705335!2sBardhanbari%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1672688000000!5m2!1sen!2sbd"
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+
+            <div style="text-align:center; margin-top:40px;">
+                <h3>39/1 Bardhanbari, Darussalam, Dhaka 1216</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-area">
+        <div class="wrapper">
+            <div class="footer-logo">Food Lovers Cafe</div>
+            <div class="footer-info">
+                <p>Open Daily: 10:00 AM - 11:00 PM</p>
+                <p>+880 1648 448868</p>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/foodloverscafe2020/" class="social-icon"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/8801648448868" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            <div class="copyright">
+                &copy; 2024 Life Events. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.getElementById('navMenu');
+            nav.classList.toggle('active');
+        }
+
+        // Food Gallery Generator (Static - No Click)
+        const grid = document.getElementById('foodGrid');
+        const count = 16;
+
+        for (let i = 1; i <= count; i++) {
+            const div = document.createElement('div');
+            div.className = 'food-item';
+
+            div.innerHTML = `
+                <div class="food-img-wrap">
+                    <img src="images/food-items/${i}.jpg" alt="Dish ${i}" loading="lazy">
+                </div>
+                <div class="food-info">
+                    <h3 class="food-name">Signature Dish ${i}</h3>
+                    <span class="food-desc">Chef's Special</span>
+                </div>
+            `;
+            grid.appendChild(div);
+        }
+
+        // Lightbox Logic (Only for Menu Cards)
+        const lightbox = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightbox-img');
+
+        function openLightbox(src) {
+            lightbox.classList.add('active');
+            lbImg.src = src;
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+        }
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        // Scroll Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
